@@ -1,0 +1,864 @@
+/*
+Theme Name: tinyone
+Theme URI: http://underscores.me/
+Author: Underscores.me
+Author URI: http://underscores.me/
+Description: Description
+Version: 1.0-wpcom
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: tinyone
+Domain Path: /languages/
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+ tinyone is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
+
+Resetting and rebuilding styles have been helped along thanks to the fine work of
+Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
+along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+and Blueprint http://www.blueprintcss.org/
+*/
+
+/***********************************************************************************************************************/
+@import url('css/bootstrap.min.css'); 
+@import url('css/font-awesome.min.css'); 
+
+/* color */
+/*
+ * Globals
+ */
+ 
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+/* title */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+/*
+ * Base structure
+ */
+html,
+body {
+  height: 100%;
+  background-color: #fff;
+  /* overflow-x: hidden;  remove for jquery scolling problems */ 
+  -webkit-font-smoothing: antialiased; /* font smoothing */
+  -moz-osx-font-smoothing: grayscale;
+}
+body {
+  /*  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif;   */
+  font-family: 'Source Sans Pro', sans-serif;
+  overflow-x : hidden ;/* fix transition overflow */
+  font-weight: 400;
+}
+/* Alignment */
+.align-left {
+  text-align: left;
+}
+.align-right {
+  text-align: right;
+}
+.center {
+  text-align: center;
+}
+/* Custom default button */
+.btn-outline-inverse {
+  color: #222222;
+  background-color: transparent;
+  border-color: #222222;
+  text-shadow: none;
+  /* Prevent inheritence from `body` */
+  border: 2px solid #222222;
+}
+.btn-inverse {
+	background-color: transparent;
+	color : #222222;
+}
+.btn-primary {
+	background-color : #222222;
+	color : #ffffff;
+	border-color : #222222;
+}
+.btn-outline-inverse:hover,
+.btn-outline-inverse:focus,
+.btn-outline-inverse:active {
+  color: #fff;
+  background-color: #222222;
+}
+.scroll-btn {
+  margin-bottom: 40px;
+  color: #222222;
+}
+.scroll-btn .fa {
+  font-size: 22px;
+}
+.scroll-btn:hover {
+  color: #fff;
+  background-color: #222222;
+}
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.black {
+  background: #222222;
+  color: #fff;
+}
+.white {
+  background: #ffffff;
+}
+.gray-dark {
+  background: #fcdb00; 
+  color:#222222;
+}
+.parallax {
+	background : url('images/background.png') no-repeat;
+	color:#fcdb00;
+}
+
+.block-wrapper {
+  display: table;
+  width: 100%;
+  float:left;
+}
+.block-wrapper-inner {
+  display: table-cell;
+  vertical-align: top;
+}
+.block-container {
+  margin-right: auto;
+  margin-left: auto;
+}
+.full-height {
+  height: 100%;
+  /* For at least Firefox */
+
+  min-height: 100%;
+}
+/* Padding for spacing */
+.inner,
+.footer {
+	padding: 20px 0;
+  /* padding: 80px 0 80px 0; */
+}
+
+/* Small menu */
+.menu-toggle {
+	display: none;
+}
+@media screen and (max-width: 600px) {
+	.menu-toggle,
+	.main-navigation.toggled .nav-menu {
+		display: block;
+	}
+
+	.main-navigation ul {
+		display: none;
+	}
+}
+
+/*
+ * Header
+ */
+ /* animation */
+nav {
+	
+}
+
+.masthead-brand {
+  text-align:center;
+  width : 100%;
+} 
+.masthead-brand, .site-title  {
+  float: left;
+  font-size: 20px;
+}
+.masthead-brand .site-logo {
+   /* margin-top : 20px; */
+   height : 50px;
+   width : 50px;
+   margin : 0 auto;
+}
+.masthead-brand .site-logo img {
+   width:100%;
+}
+.site-title, .site-description {
+  margin-top:0;
+}
+.site-description {
+  font-size: 14px;
+} 
+.masthead-brand, .masthead-nav {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.masthead-nav > li, .social-links  > li{
+  display: inline-block;
+}
+.masthead-nav > li + li {
+  margin-left: 60px;
+}
+.masthead-nav > li > a, .social-links > li > a {
+  padding-right: 0;
+  padding-left: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #222222 !important;
+  /* IE8 proofing 
+  color: rgba(255,255,255,.75); */
+  border-bottom: 2px solid transparent;
+}
+.masthead-nav > li > a:hover,
+.masthead-nav > li > a:focus {
+  background-color: transparent;
+  border-bottom-color: #a9a9a9;
+  border-bottom-color: rgba(255, 255, 255, 0.25);
+}
+.masthead-nav > .active > a,
+.masthead-nav > .active > a:hover,
+.masthead-nav > .active > a:focus {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+.social-links > li {
+  margin-left : 10px;
+}
+.social-links > li > a {
+  border-bottom : none;
+}
+.social-links > li > a:hover,
+.social-links > li > a:focus {
+  color:#fff !important;
+}
+.toggle-nav, .social-links {
+	margin-top:50px;
+	/* fix call-back transition */
+}
+.toggle-nav button {
+	
+}
+.toggle-offcanvas {
+	background : transparent;
+	margin-right : 20px;
+}
+
+/*
+ * Tiny nav
+ */
+.tiny .container-fruid, nav .container, .tiny-sidebar {
+-webkit-transition: all .75s ease-out;
+	 -o-transition: all .75s ease-out;
+		transition: all .75s ease-out;
+}
+.tiny .site-branding {display:none;}
+.tiny .toggle-nav, .tiny .social-links {margin:20px;}
+
+/*--------------------------------------------------------------
+6.0 Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar */
+}
+
+/*--------------------------------------------------------------
+9.0 Widgets
+--------------------------------------------------------------*/
+.widget {
+	margin: 1.5em 40px;
+}
+
+.widget .widget-title {
+	font-size: 20px;
+	font-weight : 500;
+}
+
+.widget ul {
+	list-style: none;
+	margin : 0;
+	padding : 0;
+}
+
+/* Make sure select elements fit in widgets */
+.widget select {
+	max-width: 100%;
+}
+
+/* Search widget */
+.widget_search .search-submit {
+	display: none;
+}
+.widget ul li {
+	padding : 10px 0;
+}
+
+/* Sidebar menu */
+.secondary-nav {
+	margin : 20px 0;
+	list-style: none;
+	padding : 0 40px;
+}
+.secondary-nav li {
+	font-size : 16px;
+	font-weight : 600;
+	/* border-top : 1px solid #333; */
+	padding: 10px 0;
+	text-transform : uppercase;
+}
+.secondary-nav li a, .widget a {
+	color : #999;
+}
+
+/*
+ * Block
+ */
+.block .lead {
+	font-size: 20px;
+	color: #999999;
+	font-weight: 400;
+}
+.block .btn-lg {
+	padding: 10px 40px;
+	font-size: 20px;
+	font-weight: 600;
+	text-transform : uppercase;
+}
+/*
+* Cover block
+*/
+.cover-block .block-wrapper-inner {
+    vertical-align: middle;  /* REMOVE FOR CONTACT PAGE */
+}
+.cover-block .row {
+	margin: 80px 0 0;
+}
+.cover-block .lead {
+  color: #222222;
+}
+.cover-block .center {
+  margin: 0 20%;
+}
+.cover-block .thumb {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: right;
+}
+.cover-block .details,
+.featured-block-img .feature  { /* @@ Should change class */
+  margin: 80px 0;
+}
+/*
+* Featured
+*/
+.featured-block .feature {
+  margin: 40px 0;
+  display:table; /* v-align feature */
+  vertical-align: middle;
+}
+.featured-block .feature .pull-left {
+  width: 25%;
+}
+.featured-block .feature .fa {
+  padding: 0 20px 10px 0;
+}
+.featured-block .feature p {
+  color: #999999;
+}
+.featured-block .feature a {
+  color: #333333;
+}
+
+/*
+* Portfolio block
+*/ 
+.portfolio-block .portfolio-item {
+	/*  background : #fcdb00;
+	padding-top : 15px; 
+	padding-bottom : 15px; */
+}
+.portfolio-block [class^=col-] {
+	/* padding-left : 0;  //fixed bootstrap col-'s padding 
+	padding-right : 0; */
+}
+
+.portfolio-item img {
+	width : 100% !important; /* fix holder.js*/
+	height : auto !important;
+}
+.portfolio-item .entry-title {
+		
+}
+
+.portfolio-item .entry-meta a {
+	color : #999999;
+}
+
+/*
+* Portfolio Metro
+*/
+.portfolio-metro  [class^=col-] {
+	padding : 0;
+}
+.portfolio-item {
+	float:left;
+	position : relative;
+	display : table;
+}
+.portfolio-item img {
+	width : 100% !important; /* fix holder.js*/
+	height : auto !important;
+}
+.small-item  {
+	width : 100%; /* fix full width */
+}
+.fix-pannel {
+	position : absolute; bottom : 0;
+	min-height : 50%; /* @@ Should see why */
+	height : 50%;
+	background : #666;
+}
+
+/*
+ * Pricing Block
+ */
+.pricing-block {
+
+}
+.pricing-block .price-item > *{
+	margin : 20px 0;
+}
+.pricing-block .price-item p {
+	color : #999999;
+}
+.pricing-block .plan-icon .fa {
+	width : 100px;
+	height : 100px;
+	border-radius: 50%;
+	background-color : #f6f6f6;
+	color : #222222;
+	line-height : 100px;
+}
+
+.pricing-block .plan-icon:hover .fa {
+	background-color : #222222;
+	color : #ffffff;
+}
+.pricing-block .price {
+	color : #222222;
+	font-size : 32px;
+	font-weight : 700;
+	border-bottom: 2px solid #222222;
+}
+.pricing-block .price , .pricing-block .price-details {
+	margin : 5px 0;
+}
+
+/*
+ * Contact Block
+ */
+.contact-block {
+   overflow: hidden;  /* fix if map is oversize */
+}
+.contact-block .inner {
+	padding : 0 ;
+}
+#map-object {
+	position : relative;
+}
+
+#map-object img {
+	width : auto;
+	/* height : 100%; */
+	position : absolute;
+	right : 0;
+	
+}
+#address-box {
+	width : 300px;
+	position : absolute;
+	top : 25%;
+	right : 80px;
+}
+#contact-form {
+	margin-left: 40px;
+	text-align:left;
+}
+#contact-form input, #contact-form textarea {
+	border: 2px solid #222222;
+}
+/*--------------------------------------------------------------
+ Contact Block - Block 2
+ -------------------------------------------------------------- */
+.contact-2 #contact-form {
+	margin : 0; /* remove margin from above config */
+	padding : 20px 0 40px 0;
+	text-align:center;
+}
+#map-object-1 {
+	overflow : hidden;
+}
+.contact-info {
+	padding : 25px 0;
+	margin : 0 100px;
+}
+.contact-info  .contact-details p {
+	color : #999;
+}
+
+/*
+* Subcribe block
+*/
+.subcrible-block .form-group {
+  display: inline-block;
+}
+.subcrible-block .input-lg {
+  width: 400px;
+}
+.subcrible-block .btn-lg {
+  height: 49px;
+  /* equal input */
+
+  vertical-align: top;
+}
+.subcrible-block .social-connect {
+  margin-top: 40px;
+  padding-left: 0;
+  list-style: none;
+  text-align: center;
+}
+.subcrible-block .social-connect li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+/*
+* Off-canvas Sidebar 
+*/
+.row-offcanvas {
+	position: relative;
+}
+.row-offcanvas {
+ -moz-transition: width 1s ease-in-out, left 0.5s ease-in-out;
+    -webkit-transition: width 1s ease-in-out, left 0.5s ease-in-out;
+    -moz-transition: width 1s ease-in-out, left 0.5s ease-in-out;
+    -o-transition: width 1s ease-in-out, left 0.5s ease-in-out;
+    transition: width 1s ease-in-out, left 0.5s ease-in-out;
+}
+
+.sidebar-offcanvas {
+-webkit-transition: all .25s ease-out;
+	 -o-transition: all .25s ease-out;
+		transition: all .25s ease-out;
+}
+
+.row-offcanvas-left {
+ left: 0;
+}
+
+.row-offcanvas-right.active
+.sidebar-offcanvas {
+right: 0; /* 6 columns */
+}
+
+.row-offcanvas-left
+.sidebar-offcanvas {
+ left: -30%; /* hide shadow */
+}
+
+/*move main class*/
+.row-offcanvas-left.active {
+ /* left: 20%; */
+ width:75%;
+ left:25%;
+
+}
+
+.row-offcanvas-left.active .block-wrapper {
+	overflow:hidden;
+}
+
+.row-offcanvas-left.active .navbar-fixed-top {
+	position : fixed; /* absolute; */
+	left : 25%;
+}
+
+.row-offcanvas-right.active, .row-offcanvas-right.active .navbar {
+/*right:  20%;  6 columns */
+}
+
+.row-offcanvas-left.active
+.sidebar-offcanvas {
+	left: 0; /* 6 columns */
+	z-index : 999999;
+}
+
+.sidebar-offcanvas {
+	position: fixed;
+	top: 0;
+	left : 0;
+	width: 25%; /* 6 columns */ 
+	height: 100%;
+	background: #ffffff;
+	/* overflow:hidden; */
+	/* overflow: auto; */
+	box-shadow: 0 -10px 10px 10px rgba(0, 0, 0, 0.1);
+	padding: 50px 0 0;	
+}
+.tiny-sidebar {
+	padding-top : 20px;
+}
+
+/*
+ * Footer
+ */
+.site-footer{
+  color: #999999;
+  position:relative;
+  float:left;
+}
+.site-footer .footer-widget {
+  padding-left: 0;
+  list-style: none;
+}
+.site-footer .footer-widget a {
+  color: #fff;
+}
+.mastfoot {
+  color: #999;
+  /* IE8 proofing */
+
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/*--------------------------------------------------------------
+10.0 Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+10.1 Posts and pages
+--------------------------------------------------------------*/
+.sticky {
+	display: block;
+}
+
+.hentry {
+	/* margin: 0 0 1.5em; Remove for home problems */
+	text-align : left;
+}
+
+.updated:not(.published) {
+	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary,
+.entry-footer
+{
+	float:left;
+	margin: 20px 0 0;
+	color : #999;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+.entry-footer,
+.entry-meta {
+	float : left;
+	width : 100%;
+	margin: 20px 0 0;
+}
+.entry-footer a,
+.entry-meta a {
+	color : #333;
+	text-transform : uppercase;
+}
+
+.byline a,
+.edit-link a,
+.tags-links a,
+.posted-on a,
+.reply a {
+  display: block;
+  float: left; /* @@ Should fix */
+  line-height: 1;
+  margin: 0 12.8px 9px 0;
+  padding: 5px 7px;
+}
+
+/*
+ * Footer
+ */
+footer {
+  color: #999999;
+}
+footer .footer-widget {
+  padding-left: 0;
+  list-style: none;
+}
+footer .footer-widget a {
+  color: #fff;
+}
+.mastfoot {
+  color: #999;
+  /* IE8 proofing */
+
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/*
+ * Affix and center
+ */
+@media (min-width: 768px) {
+  /* Pull out the header and footer */
+  .masthead {
+    position: absolute;
+    top: 0;
+  }
+  .masthead .inner {
+    margin: 0 20px;
+  }
+  .masthead-brand {
+    float: left;
+    font-size: 20px;
+  }
+  .masthead-nav {
+    float: right;
+    margin-right: 20px;
+  }
+  .mastfoot {
+    position: absolute;
+    bottom: 0;
+  }
+  /* Start the vertical centering */
+  .block-wrapper-inner {
+    /* vertical-align: middle;  REMOVE FOR CONTACT PAGE */
+  }
+  /* Handle the widths */
+  .masthead,
+  .mastfoot,
+  .block-container {
+    width: 100%;
+    /* Must be percentage or pixels for horizontal alignment */
+  
+  }
+}
+@media (min-width: 992px) {
+  .masthead,
+  .mastfoot,
+  .block-container {
+    width: 940px;
+  }
+}
+@media (max-width: 992px) {
+  .featured-block .feature {
+    margin: 25px 0;
+  }
+  .cover-block .thumb,
+  .cover-block .details {
+    text-align: center;
+    display: block;
+  }
+}
+
+/*temporary added*/
+@media (min-width: 1200px) {
+.container {
+	width: 940px !important;
+}
+}
+.navbar {margin-bottom:0; background:transparent; border:none;}
+
+.site, .site-content {
+	height: 100%; margin: 0px; padding: 0px; position: relative; 
+	width:100% /* fix transition overflow */
+}
+
+@-webkit-keyframes animatedMenu {
+	0% {
+		-webkit-transform: translateY(-20px);
+		opacity: 0;
+	}
+
+	100% {
+		-webkit-transform: translateY(0px);
+		opacity: 1;
+	}
+}
+
+@-ms-keyframes animatedMenu {
+	0% {
+		-ms-transform: translateY(-20px);
+		opacity: 0;
+	}
+
+	100% {
+		-ms-transform: translateY(0px);
+		opacity: 1;
+	}
+}
+
+@-o-keyframes animatedMenu {
+	0% {
+		-o-transform: translateY(-20px);
+		opacity: 0;
+	}
+
+	100% {
+		-o-transform: translateY(0px);
+		opacity: 1;
+	}
+}
+
+@keyframes animatedMenu {
+	0% {
+		transform: translateY(-20px);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateY(0px)opacity:1;
+	}
+}
