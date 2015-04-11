@@ -25,19 +25,13 @@
     <!-- Custom styles for this template -->
     <link href="css/styles.css" rel="stylesheet">
 
-    <script src="http://d3js.org/d3.v3.min.js" language="JavaScript"></script>
-    <script src="liquidFillGauge.js" language="JavaScript"></script>
+    <!-- Custom styles for LiquidFill GaugeText -->
+      <script src="http://d3js.org/d3.v3.min.js" language="JavaScript"></script>
+    <script src="js/liquidFillGauge.js" language="JavaScript"></script>
     <style>
-        .liquidFillGaugeText { font-family: Helvetica; font-weight: bold; }
-    </style>
-    <!-- Just for debugging purposes. Don't actually copy this line! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+        .liquidFillGaugeText { font-family: Helvetica; font-weight: bold;}
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    </style>
   </head>
 
   <body>
@@ -77,7 +71,7 @@
 					<h1 class="block-heading">Astro Health Check</h1>
 					<p class="lead"> Are you fit as mouse to be an Astronaut</p>
 					<p class="lead">
-					  <a href="#" class="btn btn-lg btn-outline-inverse">You Vs Astronaut</a>
+					  <a href="#features" class="btn btn-lg btn-outline-inverse">You Vs Astronaut</a>
 					</p>
 				</div>
 				
@@ -127,9 +121,9 @@
 								My TBD :<input type="text" class="form-control input-lg" id="Criteria5" placeholder="Criteria5">
 							  </div>
                               <div class="form-group">
-								My TBD :<input type="text" class="form-control input-lg" id="Criteria6" placeholder="Criteria5">
+								My TBD :<input type="text" class="form-control input-lg" id="Criteria6" placeholder="Criteria6">
 							  </div>
-                                <button type="submit" class="btn btn-lg btn-primary" id="submitData">Submit</button>
+                              <a href= "#graphs"><button type="submit" class="btn btn-lg btn-primary" id="submitData">Submit</button></a>
                             </form>
 						</div>
 					</div>
@@ -141,7 +135,7 @@
     </div> <!-- end featured -->
     
     <!-- pricing table -->
-    <div class="block-wrapper white pricing-block full-height">
+    <div class="block-wrapper white pricing-block full-height" id="graphs">
 		<div class="block-wrapper-inner">
 			<div class="container block-container">
 			

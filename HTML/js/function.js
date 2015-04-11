@@ -21,7 +21,7 @@ $(document).ready(function() {
 	});
 
 	$(window).scroll(function() {
-		console.log($(window).scrollTop());
+//		console.log($(window).scrollTop());
 		/*
 		// Check the location of each desired element 
 		jQuery('.block-wrapper').each(function (i) {

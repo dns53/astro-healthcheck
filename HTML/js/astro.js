@@ -1,39 +1,66 @@
-/**
- * Created by skumo on 11/04/15.
- */
-
-
-$(document).get(function(){
-    var baseEye = 10;
-    var bloodPressure = 140 / 90;
-    var aerobicWorkCapacity = 32.9;
-    var running = 215;
-    var swimming = 19;
-    var skiRace = 21;
-
-//    $("#submitData").on("click", function() {
-//        alert( "click Handler for is called.");
-//    });
-
-//    $("#submitData").closest("form").submit(function () {
-//      alert("Click Handler is called");
-//    });
-});
 
 function foo(){
-        var baseEye = 10;
         var bloodPressure = 140 / 90;
+        var baseEye = 10;
         var aerobicWorkCapacity = 32.9;
         var running = 215;
         var swimming = 19;
         var skiRace = 21;
 
-        alert("First Alert");
+        var userBP = document.getElementById("Criteria1").value;
+        var userEye = document.getElementById("Criteria2").value;
+        var userAWC = document.getElementById("Criteria3").value;
+        var userRun = document.getElementById("Criteria4").value;
+        var userSwim = document.getElementById("Criteria5").value;
+        var userSki = document.getElementById("Criteria16").value;
 
-        if (document.getElementById('eye') < baseEye){
-            alert("Do something");
+        var resultBP, resultEye, resultAWC, resultRun, resultSwim, resultSki;
+
+    if (userBP > bloodPressure){
+            resultBP = 100; // Code Red
         }
-    }
+        else{
+              resultBP = 80; // Code Green - Sample data
+        }
+        if (userEye < baseEye){
+            resultEye = 100; // Code Red
+        }
+        else{
+            resultEye = 95; // Code Green
+        }
+
+        if (userAWC < aerobicWorkCapacity){
+            resultAWC = userAWC;
+        }
+        else{
+            resultAWC = 100;
+        }
+        if (userRun < running){
+            resultRun = userRun;
+        }
+        else{
+            resultRun = 100;
+        }
+
+        if (userSwim < swimming){
+            resultSwim = 100;
+        }
+        else{
+            resultSwim = userSwim;
+        }
+
+        if (userSki < skiRace){
+            resultSki = 100;
+        }
+        else{
+            resultSki = userSki;
+        }
+
+
+
+
+}
+
 
 
 
