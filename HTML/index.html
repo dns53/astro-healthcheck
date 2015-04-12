@@ -127,7 +127,7 @@
 				
 				<div class="mastfoot">
 					<div class="center">
-					  <a href="#check" class="btn scroll-btn">
+					  <a href="#testing_blood_presure" class="btn scroll-btn">
 						  <i class="fa fa-long-arrow-down fa-2x"></i>
 					  </a>
 					  
@@ -139,6 +139,52 @@
     </div>
     <!-- end cover -->
     
+    <div class="block-wrapper blue featured-block full-height" id="testing_blood_presure">
+      <div class="block-wrapper-inner">
+        <div class="container block-container">
+	  <div class="inner block center">
+              <h2>Testing: Blood Presure</h2>
+          </div>
+
+	    <div class="center">
+	      <a href="#testing_eye_sight" class="btn scroll-btn">
+                <i class="fa fa-long-arrow-down fa-2x"></i>
+              </a>
+	    </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="block-wrapper green featured-block full-height" id="testing_eye_sight">
+      <div class="block-wrapper-inner">
+        <div class="container block-container">
+	  <div class="inner block center">
+              <h2>Testing: Eye Sight</h2>
+          </div>
+	    <div class="center">
+	      <a href="#testing_aerobic" class="btn scroll-btn">
+                <i class="fa fa-long-arrow-down fa-2x"></i>
+              </a>
+	    </div>
+        </div>
+      </div>
+    </div>
+    <div class="block-wrapper purple featured-block full-height" id="testing_aerobic">
+      <div class="block-wrapper-inner">
+        <div class="container block-container">
+	  <div class="inner block center">
+              <h2>Testing: Aerobic Work Capacity</h2>
+          </div>
+	    <div class="center">
+	      <a href="#check" class="btn scroll-btn">
+                <i class="fa fa-long-arrow-down fa-2x"></i>
+              </a>
+	    </div>
+        </div>
+      </div>
+    </div>
+
+
 
     <!-- featured -->
     <div class="block-wrapper white featured-block full-height" id="check">
@@ -149,22 +195,23 @@
 
 			<div class="inner block center">
 
-			<h2 class="block-heading">Give Us your Deails</h2>
+			<h2 class="block-heading">Enter Results</h2>
                 <!-- contact form -->
 					<div class="col-md-6 col-md-push-3 col-md-pull-3">
 						<div id="contact-form">
 							<!--<form role="form">-->
                             <form id=myForm>
+                      <input type="text" id="Criteria3" class="form-control input-sm" >
 							  <div class="form-group">
-                                My blood pressure (Systolic):
+                                <a href="#testing_blood_presure">  My blood pressure (Systolic):</a>
                                 <input type="text" id="Criteria1" class="form-control input-sm" placeholder="BP" >
 							  </div>
 							  <div class="form-group">
-								My Eye Sight (1 -20):
+								<a href="#testing_eye_sight">My Eye Sight (1 -20):</a>
                                 <input type="text" id="Criteria2" class="form-control input-sm" placeholder="Eye">
 							  </div>
 							  <div class="form-group">
-								My Aerobic Work Capacity :
+								<a href="#testing_aerobic">My Aerobic Work Capacity:</a>
                                 <input type="text" id="Criteria3" class="form-control input-sm" placeholder="something">
 							  </div>
                               <div class="form-group">
@@ -190,13 +237,39 @@
       </div>
     </div> <!-- end featured -->
 
+    
+    <!-- pricing table -->
+    <div id="graphs"></div>
+    <div class="block-wrapper red pricing-block full-height" id="to_hide" style="display:none">
+		<div class="block-wrapper-inner">
+			<div class="container block-container">
+				<div class="block inner center"> 
+					<h2 class="block-heading">Graphs</h2>
+
+					<h2 class="block-heading">Your Levels are</h2>
+					<div class="col-sm-12 col-md-4">
+                            <p>Your Blood Pressure levels are </p>
+                            <svg id="fillgauge1" width="30%" height="220"></svg>
+                    </div>
+					<!-- plan item-->
+		   <div class="col-md-4" id="2">
+                        <p>Your Eye Sight is</p>
+                        <svg id="fillgauge2" width="30%" height="220"></svg>
+                    </div> <!-- end plan item -->
+					
+					<!-- plan item-->
+		    <div class="col-md-4">
+                        <p>Your AWC levels are </p>
+                        <svg id="fillgauge1" width="30%" height="220"></svg>
+                    </div>
+               </div>
+           </div>
+    </div>
+
     <div class="block-wrapper white featured-block full-height" id="graphs">
-
       <div class="block-wrapper-inner">
-
         <div class="container block-container">
-
-			<div class="inner block center">
+		 <div class="inner block center">
 
 			<h2 class="block-heading">Your Levels Vs Astronaut</h2>
 				<div class="inner row">
@@ -276,6 +349,7 @@
 						</div>
 					</div>
 				</div>
+</div>
             </div>
       </div>
 
@@ -284,7 +358,7 @@
 
 	
 	<!-- team block -->
-	<div class="block-wrapper white team-block full-height" id="team">
+	<div class="block-wrapper light_blue team-block full-height" id="team">
 		<div class="block-wrapper-inner">
 			<div class="container block-container">
 				<div class="inner block center">
@@ -295,7 +369,23 @@
 						<div class="col-xs-12 col-md-3 member">
 							<img src="images/face1.png" class="img-circle mem-face">
 							<div class="pannel">
-								<h3 class="entry-title">Dan</h3>
+								<h3 class="entry-title">Daniel Sobey</h3>
+								<div class="entry-meta">
+									<span><a href="#">UI Designer</a> </span>
+								</div>
+								<p class="short-brief"></p>
+								<ul class="member-connect">
+									<li>
+										<a href="https://twitter.com/nerdsniping" class="">
+										  <i class="fa fa-twitter"></i>
+										</a>
+									</li>
+									<li>
+										<a href="https://plus.google.com/+DanielSobey" class="">
+										  <i class="fa fa-google-plus"></i>
+										</a>
+									</li>
+								</ul>
 							</div>
 						</div>
 						
@@ -313,6 +403,47 @@
   	 </div> 
 	<!-- end team -->
 	
+	<!-- contact 2 block -->
+	<div class="block-wrapper light_green contact-2 full-height" id="contact">
+		<div class="block-wrapper-inner">
+			<div class="container block-container">
+				
+				<div class="inner block center">
+						
+					<h2 class="block-heading">Our Entry</h2>
+					<p class="lead">This page was created for the <a href="https://2015.spaceappschallenge.org/">Space Apps Challenge 2015</a></p>
+					
+					<div class="row contact-info">
+					
+					<div class="col-md-4 contact-details">
+                                               <a href="https://2015.spaceappschallenge.org/project/astro-health-check/">
+						<i class="fa fa-rocket fa-lg"></i>
+						<h4>Our entry in the space apps challenge</h4>
+						</a>
+					</div>
+					
+					<div class="col-md-4 contact-details">
+					<a href="https://stemn.com/projects/astro-health-check">
+						<i class="fa fa-question-circle fa-lg"></i>
+						<h4>Stemn forum page for the project</h4>
+                                        </a>
+					</div>
+					
+					<div class="col-md-4 contact-details">
+					    <a href="https://github.com/skumo/astro-healthcheck">
+						<i class="fa fa-github fa-lg"></i>
+						<h4>Github project</h4>
+                                           </a>
+					</div>
+					
+					</div>
+
+				</div> <!-- end inner -->
+				
+			</div>
+		</div>
+  	 </div> 
+	<!-- end contact 2 block -->
 
   	<!-- footer --> 
 	
@@ -325,7 +456,15 @@
 		
 		  <ul class="secondary-nav">
 			<li class="menu-item"><a href="#home" class="">Home Page</a></li>
-			<li class="menu-item"><a href="#check" class="">Test yourself</a></li>
+			<li class="menu-item"><a href="#testing_blood_presure" class="">Test Yourself:</a>
+			  <ul>
+		  	    <li class="menu-item"><a href="#testing_blood_presure" class="">Blood Presure</a></li>
+			    <li class="menu-item"><a href="#testing_eye_sight" class="">Eye Sight</a></li>
+			    <li class="menu-item"><a href="#testing_aerobic" class="">Aerobic Work Capacity</a></li>
+			  </ul>
+			</li>
+
+			<li class="menu-item"><a href="#check" class="">Enter Results</a></li>
 			<li class="menu-item"><a href="#graphs" class="">Graphs</a></li>
 			<li class="menu-item"><a href="#team" class="">Team</a></li>
 		  </ul>

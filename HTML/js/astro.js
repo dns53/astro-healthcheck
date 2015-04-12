@@ -1,5 +1,13 @@
 //
-//function foo(){
+function foo(){
+
+
+
+    results= document.getElementById('to_hide').style.display = 'inline';
+    //window.scrollTo(0,document.getElementById('graphs').offsetTop);
+    self.location.href = '#graphs';
+}
+
 //        var bloodPressure = 140 / 90;
 //        var baseEye = 10;
 //        var aerobicWorkCapacity = 32.9;
