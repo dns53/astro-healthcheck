@@ -103,7 +103,7 @@ body {
 }
 .gray-dark {
   color:#222222;
-  background: #fcdb00;
+  background: url("../images/space3.jpg") no-repeat center center fixed;
 
 }
 .parallax {
