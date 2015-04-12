@@ -26,7 +26,8 @@
     <script src="http://d3js.org/d3.v3.min.js" language="JavaScript"></script>
     <script src="js/liquidFillGauge.js" language="JavaScript"></script>
     <script type="text/javascript">
-        function foo(){
+
+        function foo() {
             var bloodPressure = 140 / 90;
             var baseEye = 10;
             var aerobicWorkCapacity = 32.9;
@@ -39,31 +40,54 @@
             var userAWC = document.getElementById("Criteria3").value;
             var userRun = document.getElementById("Criteria4").value;
             var userSwim = document.getElementById("Criteria5").value;
-            var userSki = document.getElementById("Criteria16").value;
+            var userSki = document.getElementById("Criteria6").value;
 
 
-            document.getElementById('test1').innerHTML += '<br>Some new content!';
-
-            if (userBP > 140){
-                console.log("You need to work on your BP"); }
-            else console.log(" You are fine");
-
-            if (userEye < 20){ console.log("You need to work on your Eye Sight")}
-            else console.log("You are just fine");
-
-            if(userAWC < 32){console.log("You need to work on AWC")}
-            else console.log("You are fine with AWC");
-
-            if(userRun > 3){console.log("You need to improve on Running")}
-            else console.log("Your running is fine");
-
-            if(userSki > 21){console.log("improve your skiing skills")}
-            else console.log("You need to skii more");
-
-            if(userSwim > 19){console.log("improve your skiing skills")}
-            else console.log("You need to skii more");
-
+            if (userBP > 140) {
+                console.log("You need to work on your BP");
+                document.getElementById('1').innerHTML = 'Your Blood Pressure is ' + userBP + '.';
             }
+            else {
+                console.log(" You are fine");
+                document.getElementById('1').innerHTML = " You are doing just fine here";
+            }
+
+            if (userEye < 20) {
+                document.getElementById('2').innerHTML = 'Your Eye Sight is ' + userEye + '.';
+            }
+            else {
+                document.getElementById('2').innerHTML = " You are doing just fine here";
+            }
+
+            if (userAWC < 32) {
+                document.getElementById('3').innerHTML = 'Your AWC is ' + userAWC + 'ml\\kg\\min.';
+            }
+
+            else {
+                document.getElementById('3').innerHTML = " You are doing just fine here";
+            }
+
+            if(userRun > 3){
+                document.getElementById('4').innerHTML = 'Your Running at ' + userRun + 'mins.';
+            }
+            else {
+                document.getElementById('4').innerHTML = " You are doing just fine with Running";
+            }
+
+            if(userSki > 21){
+                document.getElementById('6').innerHTML = 'Your Ski Levels are at ' + userSki + 'mins.';
+                }
+            else {
+                document.getElementById('6').innerHTML = " You are doing just fine with Skiing";
+            }
+
+            if(userSwim > 19){
+                document.getElementById('5').innerHTML = 'Your Swimming levels are at ' + userSwim + 'mins.';
+            }
+            else {
+                document.getElementById('5').innerHTML = " You are good swimmer";
+            }
+        }
       </script>
 
   </head>
@@ -177,29 +201,30 @@
 						<div id="contact-form">
 							<!--<form role="form">-->
                             <form id=myForm>
-							  <div class="form-group blue">
+                      <input type="text" id="Criteria3" class="form-control input-sm" >
+							  <div class="form-group">
                                 <a href="#testing_blood_presure">  My blood pressure (Systolic):</a>
-                                <input type="text" id="Criteria1" class="form-control input-sm" >
+                                <input type="text" id="Criteria1" class="form-control input-sm" placeholder="BP" >
 							  </div>
-							  <div class="form-group green">
-							 <a href="#testing_eye_sight">My Eye Sight (1 -20):</a>
-                                <input type="text" id="Criteria2" class="form-control input-sm" >
+							  <div class="form-group">
+								<a href="#testing_eye_sight">My Eye Sight (1 -20):</a>
+                                <input type="text" id="Criteria2" class="form-control input-sm" placeholder="Eye">
 							  </div>
-							  <div class="form-group purple">
-								<a href="#testing_aerobic">My Aerobic Work Capacity :</a>
-                                <input type="text" id="Criteria3" class="form-control input-sm" >
+							  <div class="form-group">
+								<a href="#testing_aerobic">My Aerobic Work Capacity:</a>
+                                <input type="text" id="Criteria3" class="form-control input-sm" placeholder="something">
 							  </div>
                               <div class="form-group">
 								Time I take to Run 1km (in Mins) :
-                                <input type="text" id="Criteria4" class="form-control input-sm" >
+                                <input type="text" id="Criteria4" class="form-control input-sm" placeholder="something">
 							  </div>
                               <div class="form-group">
 								Time I take to Swim 200 mtrs (in Mins) :
-                                <input type="text" id="Criteria5" class="form-control input-sm" >
+                                <input type="text" id="Criteria5" class="form-control input-sm" placeholder="something">
 							  </div>
                               <div class="form-group">
 								Time I take to Ski 5km Race (in Mins)
-                                <input type="text" id="Criteria6" class="form-control input-sm" >
+                                <input type="text" id="Criteria6" class="form-control input-sm" placeholder="something">
 							  </div>
                               <a href= "#graphs"><button type="submit" class="btn btn-lg btn-primary" id="submitData" onclick="foo()">Submit</button></a>
                             </form>
@@ -256,7 +281,7 @@
 							<div class="media-body align-left">
 								<h3 class="media-heading">Blood Pressure</h3>
 								<p>Astronauts Blood Pressure is 140\90 (Sitting Position)</p>
-                                <div id="test1">something here!</div>
+                                <div id="1" style="color: darkred"></div>
 							</div>
 						</div>
 
@@ -267,6 +292,8 @@
 							<div class="media-body align-left">
 								<h3 class="media-heading">Eye Sight</h3>
 								<p>Astronauts Eye Sight have 20/20 vision</p>
+                                <div id="2" style="color: darkred"></div>
+
 							</div>
 						</div>
 
@@ -279,6 +306,8 @@
 							<div class="media-body align-left">
 								<h3 class="media-heading">Aerobic Work Capacity</h3>
 								<p>AWC for Astronauts is 32.9 ml\kg\min </p>
+                                <div id="3" style="color: darkred"></div>
+
 							</div>
 						</div>
 
@@ -289,6 +318,8 @@
 							<div class="media-body align-left">
 								<h3 class="media-heading">Running</h3>
 								<p>Astronauts take 3 mins 35 secs (atmost) to run 1km </p>
+                                <div id="4" style="color: darkred"></div>
+
 							</div>
 						</div>
 					</div>
@@ -300,6 +331,8 @@
 							<div class="media-body align-left">
 								<h3 class="media-heading">Swimming</h3>
 								<p>Astronauts take 19 mins max to swim 200 mtrs (Freestyle)</p>
+                                <div id="5" style="color: darkred"></div>
+
 							</div>
 						</div>
 
@@ -310,6 +343,8 @@
 							<div class="media-body align-left">
 								<h3 class="media-heading">Skiing</h3>
 								<p>Astronauts take 21 mins max to race 5kms Ski</p>
+                                <div id="6" style="color: darkred"></div>
+
 							</div>
 						</div>
 					</div>
@@ -436,9 +471,6 @@
     </div><!--/span-->
     
 </div> <!-- end off-canvas -->
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="bootstrap-master-2/dist/js/bootstrap.min.js"></script>
     <script src="js/offcanvas.js"></script>
