@@ -1184,6 +1184,7 @@
 }
 .fa-long-arrow-down:before {
   content: "\f175";
+    color: #ffff00;
 }
 .fa-long-arrow-up:before {
   content: "\f176";
