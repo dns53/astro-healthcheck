@@ -30,12 +30,39 @@
             var bloodPressure = 140 / 90;
             var baseEye = 10;
             var aerobicWorkCapacity = 32.9;
-            var running = 215;
+            var running = 3;
             var swimming = 19;
             var skiRace = 21;
 
             var userBP = document.getElementById("Criteria1").value;
-                loadLiquidFillGauge("fillgauge1", userBP);
+            var userEye = document.getElementById("Criteria2").value;
+            var userAWC = document.getElementById("Criteria3").value;
+            var userRun = document.getElementById("Criteria4").value;
+            var userSwim = document.getElementById("Criteria5").value;
+            var userSki = document.getElementById("Criteria16").value;
+
+
+            document.getElementById('test1').innerHTML += '<br>Some new content!';
+
+            if (userBP > 140){
+                console.log("You need to work on your BP"); }
+            else console.log(" You are fine");
+
+            if (userEye < 20){ console.log("You need to work on your Eye Sight")}
+            else console.log("You are just fine");
+
+            if(userAWC < 32){console.log("You need to work on AWC")}
+            else console.log("You are fine with AWC");
+
+            if(userRun > 3){console.log("You need to improve on Running")}
+            else console.log("Your running is fine");
+
+            if(userSki > 21){console.log("improve your skiing skills")}
+            else console.log("You need to skii more");
+
+            if(userSwim > 19){console.log("improve your skiing skills")}
+            else console.log("You need to skii more");
+
             }
       </script>
 
@@ -138,49 +165,88 @@
 
       </div>
     </div> <!-- end featured -->
-    
-    <!-- pricing table -->
-    <div class="block-wrapper white pricing-block full-height" id="graphs">
-		<div class="block-wrapper-inner">
-			<div class="container block-container">
-			
-				<div class="block inner center"> 
-				
-					<h2 class="block-heading">Your Levels are</h2>
-					<div class="col-sm-12 col-md-4">
-                            <p>Your Blood Pressure levels are </p>
-                            <svg id="fillgauge1" width="30%" height="220"></svg>
-                    </div>
-					<!-- plan item-->
-					<div class="col-md-4" id="2">
-                        <p>Your Eye Sight is</p>
-                        <svg id="fillgauge2" width="30%" height="220"></svg>
-                    </div> <!-- end plan item -->
-					
-					<!-- plan item-->
+
+    <div class="block-wrapper white featured-block full-height" id="graphs">
+
+      <div class="block-wrapper-inner">
+
+        <div class="container block-container">
+
+			<div class="inner block center">
+
+			<h2 class="block-heading">Your Levels Vs Astronaut</h2>
+				<div class="inner row">
 					<div class="col-md-4">
-                        <p>Your AWC levels are </p>
-                        <svg id="fillgauge1" width="30%" height="220"></svg>
+						<div class="feature media">
+							<a class="pull-left">
+								<i class="fa fa-clock-o fa-2x"></i>
+						  	</a>
+							<div class="media-body align-left">
+								<h3 class="media-heading">Blood Pressure</h3>
+								<p>Astronauts Blood Pressure is 140\90 (Sitting Position)</p>
+                                <div id="test1">something here!</div>
+							</div>
+						</div>
 
-					</div> <!-- end plan item -->
+						<div class="feature media">
+							<a class="pull-left">
+								<i class="fa fa-road fa-2x"></i>
+						  	</a>
+							<div class="media-body align-left">
+								<h3 class="media-heading">Eye Sight</h3>
+								<p>Astronauts Eye Sight have 20/20 vision</p>
+							</div>
+						</div>
 
-                    <!-- plan item-->
-					<div class="col-sm-12 col-md-4">
-                        <p>Your Running Levels are</p>
-                        <svg id="fillgauge1" width="30%" height="220"></svg>
-					</div> <!-- end plan item -->
+					</div>
+					<div class="col-md-4">
+						<div class="feature media">
+							<a class="pull-left">
+								<i class="fa fa-flag fa-2x"></i>
+						  	</a>
+							<div class="media-body align-left">
+								<h3 class="media-heading">Aerobic Work Capacity</h3>
+								<p>AWC for Astronauts is 32.9 ml\kg\min </p>
+							</div>
+						</div>
 
+						<div class="feature media">
+							<a class="pull-left">
+								<i class="fa fa-apple fa-2x"></i>
+						  	</a>
+							<div class="media-body align-left">
+								<h3 class="media-heading">Running</h3>
+								<p>Astronauts take 3 mins 35 secs (atmost) to run 1km </p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="feature media">
+							<a class="pull-left">
+								<i class="fa fa-stop fa-2x"></i>
+						  	</a>
+							<div class="media-body align-left">
+								<h3 class="media-heading">Swimming</h3>
+								<p>Astronauts take 19 mins max to swim 200 mtrs (Freestyle)</p>
+							</div>
+						</div>
 
-                    <!-- plan item-->
-					<div class="col-sm-12 col-md-4">
-                        <p>Your Skiing Levels are</p>
-                        <svg id="fillgauge1" width="30%" height="220"></svg>
-					</div> <!-- end plan item -->
-
+						<div class="feature media">
+							<a class="pull-left">
+								<i class="fa fa-ambulance fa-2x"></i>
+						  	</a>
+							<div class="media-body align-left">
+								<h3 class="media-heading">Skiing</h3>
+								<p>Astronauts take 21 mins max to race 5kms Ski</p>
+							</div>
+						</div>
+					</div>
 				</div>
-			</div>
-		</div>
-  	 </div> <!-- pricing table -->
+            </div>
+      </div>
+
+      </div>
+    </div> <!-- end featured -->
 
 	
 	<!-- team block -->
@@ -189,8 +255,6 @@
 			<div class="container block-container">
 				<div class="inner block center">
 					<h2 class="block-heading">Our team</h2>
-					<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum. Donec rutrum sed sem quis venenatis.</p>
-					
 					<!-- grid -->
 					<div class="inner row">
 						
@@ -198,27 +262,6 @@
 							<img src="images/face1.png" class="img-circle mem-face">
 							<div class="pannel">
 								<h3 class="entry-title">Dan</h3>
-								<div class="entry-meta">
-									<span><a href="#">UI Designer</a> </span>
-								</div>
-								<p class="short-brief">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-								<ul class="member-connect">
-									<li>
-										<a href="#" class="">
-										  <i class="fa fa-facebook"></i>
-										</a>
-									</li>
-									<li>
-										<a href="#" class="">
-										  <i class="fa fa-twitter"></i>
-										</a>
-									</li>
-									<li>
-										<a href="#" class="">
-										  <i class="fa fa-google-plus"></i>
-										</a>
-									</li>
-								</ul>
 							</div>
 						</div>
 						
@@ -226,27 +269,6 @@
 							<img src="images/face3.png" class="img-circle mem-face">
 							<div class="pannel">
 								<h3 class="entry-title">Suman</h3>
-								<div class="entry-meta">
-									<span><a href="#">UI Designer</a> </span>
-								</div>
-								<p class="short-brief">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-								<ul class="member-connect">
-									<li>
-										<a href="#" class="">
-										  <i class="fa fa-facebook"></i>
-										</a>
-									</li>
-									<li>
-										<a href="#" class="">
-										  <i class="fa fa-twitter"></i>
-										</a>
-									</li>
-									<li>
-										<a href="#" class="">
-										  <i class="fa fa-google-plus"></i>
-										</a>
-									</li>
-								</ul>
 							</div>
 						</div>
 						
@@ -257,44 +279,6 @@
   	 </div> 
 	<!-- end team -->
 	
-	<!-- contact 2 block -->
-	<div class="block-wrapper white contact-2 full-height" id="contact">
-		<div class="block-wrapper-inner">
-			<div class="container block-container">
-				
-				<div class="inner block center">
-						
-					<h2 class="block-heading">Contact us</h2>
-					<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum. Donec rutrum sed sem quis venenatis.</p>
-					
-					<div class="row contact-info">
-					
-					<div class="col-md-4 contact-details">
-						<i class="fa fa-map-marker fa-lg"></i>
-						<h4>Address</h4>
-						<p>66, Dang Van ngu, Dong Da, Ha noi, Vietnam</p>
-					</div>
-					
-					<div class="col-md-4 contact-details">
-						<i class="fa fa-envelope fa-lg"></i>
-						<h4>Email</h4>
-						<p>hien.comp@me.com</p>
-					</div>
-					
-					<div class="col-md-4 contact-details">
-						<i class="fa fa-phone-square fa-lg"></i>
-						<h4>Phone</h4>
-						<p class="muted">+844 1234 56789</p>
-					</div>
-					
-					</div>
-
-				</div> <!-- end inner -->
-				
-			</div>
-		</div>
-  	 </div> 
-	<!-- end contact 2 block -->
 
   	<!-- footer --> 
 	
@@ -310,7 +294,6 @@
 			<li class="menu-item"><a href="#check" class="">Test yourself</a></li>
 			<li class="menu-item"><a href="#graphs" class="">Graphs</a></li>
 			<li class="menu-item"><a href="#team" class="">Team</a></li>
-			<li class="menu-item"><a href="#contact" class="">Contact</a></li>			
 		  </ul>
     </div><!--/span-->
     
