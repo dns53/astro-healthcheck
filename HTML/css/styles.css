@@ -109,6 +109,11 @@ body {
   background: #6666ff;
 }
 
+.light_blue {
+  background: #99ccff;
+}
+
+
 .purple {
   background: #ff66ff;
 }
@@ -119,6 +124,9 @@ body {
 
 .green {
   background: #66ff66;
+}
+.light_green {
+  background: #ccff99;
 }
 
 .gray-dark {
@@ -543,32 +551,6 @@ nav {
 }
 
 /*
-* Subcribe block
-*/
-.subcrible-block .form-group {
-  display: inline-block;
-}
-.subcrible-block .input-lg {
-  width: 400px;
-}
-.subcrible-block .btn-lg {
-  height: 49px;
-  /* equal input */
-
-  vertical-align: top;
-}
-.subcrible-block .social-connect {
-  margin-top: 40px;
-  padding-left: 0;
-  list-style: none;
-  text-align: center;
-}
-.subcrible-block .social-connect li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-/*
 ** Testimonials & Stats block
 */
 .testi-block .starts-detail, .testi-block .testimonial {
@@ -743,7 +725,14 @@ nav {
 */
 .subcrible-block .form-group {
   display: inline-block;
+  padding: 10px;
+  color: white;
 }
+.subcrible-block .form-group a {
+text-decoration-color: white;
+}
+
+
 .subcrible-block .input-lg {
   width: 400px;
 }
