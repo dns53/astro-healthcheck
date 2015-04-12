@@ -101,6 +101,26 @@ body {
 .white {
   background: #ffffff;
 }
+.yellow {
+  background: #ffff66;
+}
+
+.blue {
+  background: #6666ff;
+}
+
+.purple {
+  background: #ff66ff;
+}
+
+.red {
+  background: #ff6666;
+}
+
+.green {
+  background: #66ff66;
+}
+
 .gray-dark {
   color:#222222;
   background: #fcdb00;
